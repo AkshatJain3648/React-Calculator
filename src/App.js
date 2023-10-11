@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './App.css'
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 
 
 function Calculator() {
@@ -27,6 +28,7 @@ function Calculator() {
   }
 
   return (
+    <BrowserRouter basename="/my-app">
     <div className="calculator">
       <form>
         <input type="text" value={result} />
@@ -55,6 +57,7 @@ function Calculator() {
         <button name="=" id="equals-btn" onClick={calculate}>=</button>
       </div>
     </div>
+    </BrowserRouter>
   );
 }
 
